@@ -38,7 +38,7 @@ bool trie::Search(const char*s) {
 
 }
 
-bool trie::DeleteOccurance(const char * s)
+bool trie::DeleteOccurence(const char * s)
 {
 	if (!Search(s))return false;
 	int id = 0;

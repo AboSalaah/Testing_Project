@@ -42,6 +42,9 @@
     <ClCompile Include="SegmentTreeTest.cpp">
       <Filter>Source Files\Test_Code</Filter>
     </ClCompile>
+    <ClCompile Include="TrieMock.cpp">
+      <Filter>Source Files\Test_Code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Trie.h">

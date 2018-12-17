@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 class trie {
-private:
+protected:
 	const static int MaxNode = 1e5 * 26;
 	const static int SizeAlpha = 26;
 	int trie_nodes[MaxNode][SizeAlpha];
@@ -13,7 +13,9 @@ private:
 public:
 	trie();
 	void Insert(const char* s);
-	bool Search(const char*s);	bool DeleteOccurance(const char*s);	int getNumberOfDistinctWords();
+	virtual bool Search(const char*s);
+	virtual bool DeleteOccurence(const char*s);
+	int getNumberOfDistinctWords();
 	int getNumberOfNodes();
 	string getLongestPrefix(const char* s);
 };

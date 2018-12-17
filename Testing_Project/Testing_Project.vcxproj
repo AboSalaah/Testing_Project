@@ -153,6 +153,7 @@
     <ClCompile Include="SegmentTree.cpp" />
     <ClCompile Include="SegmentTreeTest.cpp" />
     <ClCompile Include="Trie.cpp" />
+    <ClCompile Include="TrieMock.cpp" />
     <ClCompile Include="Trie_Test.cpp" />
   </ItemGroup>
   <ItemGroup>

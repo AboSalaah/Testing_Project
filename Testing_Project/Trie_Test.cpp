@@ -35,11 +35,11 @@ TEST(TrieTestGroup, Test4) {
 	LONGS_EQUAL(7, t->getNumberOfNodes());
 }
 TEST(TrieTestGroup, Test5) {
-	CHECK_FALSE(t->DeleteOccurance("ahmed"));
+	CHECK_FALSE(t->DeleteOccurence("ahmed"));
 }
 TEST(TrieTestGroup, Test6) {
 	t->Insert("hamada");
-	CHECK(t->DeleteOccurance("hamada"));
+	CHECK(t->DeleteOccurence("hamada"));
 }
 TEST(TrieTestGroup, Test7) {
 	string s = "hamada";
@@ -73,13 +73,13 @@ TEST(TrieTestGroup, Test11) {
 	t->Insert("sobeih");
 	t->Insert("magdy");
 	t->Insert("hamada");
-	t->DeleteOccurance("hamada");
+	t->DeleteOccurence("hamada");
 	LONGS_EQUAL(2, t->getNumberOfDistinctWords());
 }
 TEST(TrieTestGroup, Test12) {
 	t->Insert("sobeih");
 	t->Insert("magdy");
 	t->Insert("hamada");
-	t->DeleteOccurance("magdy");
+	t->DeleteOccurence("magdy");
 	LONGS_EQUAL(12, t->getNumberOfNodes());
 }
