@@ -25,7 +25,6 @@ public:
 	}
 	virtual bool Search(const char*s) {
 		mock().actualCall("Search").withParameter("s", s);
-		cout << "ahoh" << endl;
 		return false;
 	}
 };

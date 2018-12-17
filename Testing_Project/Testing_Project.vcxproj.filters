@@ -45,6 +45,12 @@
     <ClCompile Include="TrieMock.cpp">
       <Filter>Source Files\Test_Code</Filter>
     </ClCompile>
+    <ClCompile Include="Math_Utils.cpp">
+      <Filter>Source Files\NewFilter1</Filter>
+    </ClCompile>
+    <ClCompile Include="Math_Utils_test.cpp">
+      <Filter>Source Files\Test_Code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Trie.h">
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="SegmentTree.h">
       <Filter>Header Files\NewFilter1</Filter>
+    </ClInclude>
+    <ClInclude Include="Math_Utils.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
