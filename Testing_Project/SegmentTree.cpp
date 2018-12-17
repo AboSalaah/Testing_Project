@@ -4,6 +4,10 @@ int gcd(int a, int b)
 {
 	if (b == 0)return a; return gcd(b, a%b);
 }
+SegmentTree::SegmentTree()
+{
+}
+
 SegmentTree::SegmentTree(int n)
 {
 	leavesCnt = n;
@@ -14,7 +18,8 @@ SegmentTree::SegmentTree(int n)
 
 void SegmentTree::Update(int x, int y,node val, int l, int r, int idx)
 {
-	if (l == r) {
+	if (l > y || r < x)return;
+	if (l>=x&&r<=y) {
 		tree[idx] = val;
 		return;
 	}
@@ -30,7 +35,7 @@ void SegmentTree::Update(int x, int y,node val, int l, int r, int idx)
 
 int SegmentTree::getMax(int x, int y, int l, int r, int idx)
 {
-	if (l > y || r < x)return 0;
+	if (l > y || r < x)return -1;
 	if (l >= x&&r <= y)return tree[idx].max;
 	int mid = (l + r) >> 1;
 	return (getMax(x, y, l, mid, idx << 1),getMax(x, y, mid + 1, r, (idx << 1) + 1));
@@ -38,7 +43,7 @@ int SegmentTree::getMax(int x, int y, int l, int r, int idx)
 
 int SegmentTree::getMin(int x, int y, int l, int r, int idx)
 {
-	if (l > y || r < x)return 0;
+	if (l > y || r < x)return 1e9;
 	if (l >= x&&r <= y)return tree[idx].min;
 	int mid = (l + r) >> 1;
 	return min(getMin(x, y, l, mid, idx << 1), getMin(x, y, mid + 1, r, (idx << 1) + 1));
@@ -49,7 +54,7 @@ int SegmentTree::getSum(int x, int y, int l, int r, int idx)
 	if (l > y || r < x)return 0;
 	if (l >= x&&r <= y)return tree[idx].sum;
 	int mid = (l + r) >> 1;
-	return getSum(x, y, mid, idx << 1) + getSum(x, y, mid + 1, r, (idx << 1) + 1);
+	return getSum(x, y, l,mid, idx << 1) + getSum(x, y, mid + 1, r, (idx << 1) + 1);
 }
 
 int SegmentTree::getGcd(int x, int y, int l, int r, int idx)
@@ -65,5 +70,5 @@ int SegmentTree::getMul(int x, int y, int l, int r, int idx)
 	if (l > y || r < x)return 0;
 	if (l >= x&&r <= y)return tree[idx].mul;
 	int mid = (l + r) >> 1;
-	return getMul(x, y, mid, idx << 1) * getMul(x, y, mid + 1, r, (idx << 1) + 1);
+	return getMul(x, y,l, mid, idx << 1) * getMul(x, y, mid + 1, r, (idx << 1) + 1);
 }

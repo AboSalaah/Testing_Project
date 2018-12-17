@@ -150,10 +150,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SegmentTree.cpp" />
+    <ClCompile Include="SegmentTreeTest.cpp" />
     <ClCompile Include="Trie.cpp" />
     <ClCompile Include="Trie_Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SegmentTree.h" />
     <ClInclude Include="Trie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

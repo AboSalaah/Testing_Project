@@ -36,9 +36,18 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SegmentTree.cpp">
+      <Filter>Source Files\NewFilter1</Filter>
+    </ClCompile>
+    <ClCompile Include="SegmentTreeTest.cpp">
+      <Filter>Source Files\Test_Code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Trie.h">
+      <Filter>Header Files\NewFilter1</Filter>
+    </ClInclude>
+    <ClInclude Include="SegmentTree.h">
       <Filter>Header Files\NewFilter1</Filter>
     </ClInclude>
   </ItemGroup>

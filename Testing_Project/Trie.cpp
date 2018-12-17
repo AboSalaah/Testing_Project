@@ -33,7 +33,9 @@ bool trie::Search(const char*s) {
 		else {
 			id = trie_nodes[id][s[i] - 'a'];
 		}
-	}	return isEnd[id];
+	}
+	return isEnd[id];
+
 }
 
 bool trie::DeleteOccurance(const char * s)
@@ -79,6 +81,5 @@ string trie::getLongestPrefix(const char* s)
 			id = trie_nodes[id][s[i] - 'a'];
 		}
 	}
-	cout << res << endl;
 	return res;
 }
