@@ -1,4 +1,4 @@
 ﻿  Trie_Test.cpp
-c:\users\ahmed saleh\documents\visual studio 2015\projects\testing_project\testing_project\trie.h(4): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\ahmed saleh\documents\visual studio 2015\projects\testing_project\testing_project\trie.h(6): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
   Testing_Project.vcxproj -> C:\Users\Ahmed Saleh\documents\visual studio 2015\Projects\Testing_Project\Debug\Testing_Project.exe
   Testing_Project.vcxproj -> C:\Users\Ahmed Saleh\documents\visual studio 2015\Projects\Testing_Project\Debug\Testing_Project.pdb (Full PDB)

@@ -1,4 +1,6 @@
 #pragma once
+#include<string>
+using namespace std;
 class trie {
 private:
 	const static int MaxNode = 1e5 * 26;
@@ -11,6 +13,7 @@ private:
 public:
 	trie();
 	void Insert(const char* s);
-	bool Search(const char*s);	bool DeleteOccurance(const char*s);	int getNumberOfWords();
+	bool Search(const char*s);	bool DeleteOccurance(const char*s);	int getNumberOfDistinctWords();
 	int getNumberOfNodes();
+	string getLongestPrefix(const char* s);
 };
